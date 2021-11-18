@@ -44,4 +44,6 @@ def search():
     return json.dumps(list(output_set))
 
 
-init()
+if __name__=='__main__':
+    init()
+    app.run(host='0.0.0.0', port=5000)

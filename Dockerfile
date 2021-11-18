@@ -8,6 +8,4 @@ COPY api.py .
 COPY movies .
 RUN rm -f /root/items.json && scrapy crawl imdb
 
-
-ENV FLASK_APP=api
-ENTRYPOINT ["flask", "run"]
+ENTRYPOINT ["python", "api.py"]
